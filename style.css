@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+
+body {
+  font-family: "EB Garamond", serif;
+  margin: 0;
+  padding: 0;
+  color: #000000;
+  /* background: #e3e3e3; */
+  /* background: #f2f2f2; */
+  background: #f0ece2;
+  /* background-color: #53a8b6; */
+  font-size: 16px;
+}
+
+.header-page {
+  background: #e3e3e3;
+  /* background: #ececec; */
+  /* padding: 0 0; */
+  position: fixed;
+  width: 100%;
+  height: 100px;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* margin: 0 auto; */
+  /* padding: 0 auto; */
+}
+
+.header-page-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  width: 1000px;
+  position: fixed;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  column-gap: 15px;
+  padding: 10px 0px 0px 0px;
+}
+
+.social-media img {
+  width: 20px;  /* Adjust the size as needed */
+  height: 20px; /* Adjust the size as needed */
+}
+
+.logo {
+  flex: 1;
+}
+
+.logo h1 {
+  margin: 10px 0px 0px 0px;
+  font-size: 1.5em;
+  font-weight: 700;
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+  letter-spacing: .2rem;
+}
+
+nav {
+  flex: 1;
+  text-align: right;
+  font-optical-sizing: auto;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.2rem;
+  /* font-weight: 700; */
+}
+
+.image-container {
+  width: 100%;
+  height: calc(100vh - 100px);
+  max-height: 815px;
+  overflow: hidden;
+  object-fit: fill; 
+  transition: transform 0.5s ease; 
+  background-image: url('src/banner.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.section-heading {
+  text-align: center;
+  font-size: 2rem;
+  /* font-family: "Playfair Display", serif; */
+  /* font-optical-sizing: auto; */
+  letter-spacing: .2rem;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: #333;
+  width: 50%;
+  margin: 20px auto;
+}
+
+.section {
+  padding: 100px 20px;
+  min-height: 500px;
+  margin: 0 10%;
+}
+
+.split-screen {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  column-gap: 4%;
+  padding: 2% 10%;
+}
+
+.split-screen-text-section {
+  font-size: 1rem;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.paragraph-heading {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+}
+.paragraph-text {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.split-screen-media {
+  width: 40%;
+  display: flex;
+  align-items: center;
+}
+
+.media-left{
+  justify-content: right;
+}
+.media-right{
+  justify-content: left;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+  height: 700px; 
+  width: 700px;
+  margin: 0 auto;
+}
+
+.grid-item {
+  height: 100%;
+  /* background-image: linear-gradient(rgba(83,168,182,0.1), rgba(83,168,182,0.1)), url('src/poetry-background-square.jpg'); */
+  background-image: url('src/poetry-background-square.jpg');
+  background-size: 300%; /* Assuming the image should be split into 9 equal parts */
+  background-repeat: no-repeat;
+  border: 1px solid #fff; /* Optional: for better visual separation of items */
+  box-sizing: border-box;
+  transition: background-position 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+
+.text-container {
+  width: 220px;
+  height: 220px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  position: absolute;
+  color: black;
+  padding: 20px;
+  border-radius: 5px;
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  font-weight: 400;
+  font-size: 1.5rem;
+  text-decoration: none;
+
+}
+
+.grid-item:hover .text-container {
+  opacity: 1;
+}
+
+
+
+#item1 { background-position: 0% 0%;}
+#item2 { background-position: 50% 0%;}
+#item3 { background-position: 100% 0%;}
+#item4 { background-position: 0% 50%;}
+#item5 { background-position: 50% 50%;}
+#item6 { background-position: 100% 50%;}
+#item7 { background-position: 0% 100%;}
+#item8 { background-position: 50% 100%;}
+#item9 { background-position: 100% 100}
+#item4 { background-position: 0% 50%;}
+#item1:hover { background-position: 0% 0%; background-image: linear-gradient(rgba(240, 236, 226,0.9), rgba(240, 236, 226,0.9)), url('src/poetry-background-square.jpg');}
+#item2:hover { background-position: 50% 0%;background-image: linear-gradient(rgba(240, 236, 226,0.9), rgba(240, 236, 226,0.9)), url('src/poetry-background-square.jpg');}
+#item3:hover { background-position: 100% 0%;background-image: linear-gradient(rgba(240, 236, 226,0.9), rgba(240, 236, 226,0.9)), url('src/poetry-background-square.jpg');}
+#item4:hover { background-position: 0% 50%;background-image: linear-gradient(rgba(240, 236, 226,0.9), rgba(240, 236, 226,0.9)), url('src/poetry-background-square.jpg');}
+#item5:hover { background-position: 50% 50%;background-image: linear-gradient(rgba(240, 236, 226,0.9), rgba(240, 236, 226,0.9)), url('src/poetry-background-square.jpg');}
+#item6:hover { background-position: 100% 50%;background-image: linear-gradient(rgba(240, 236, 226,0.9), rgba(240, 236, 226,0.9)), url('src/poetry-background-square.jpg');}
+#item7:hover { background-position: 0% 100%;background-image: linear-gradient(rgba(240, 236, 226,0.9), rgba(240, 236, 226,0.9)), url('src/poetry-background-square.jpg');}
+#item8:hover { background-position: 50% 100%;background-image: linear-gradient(rgba(240, 236, 226,0.9), rgba(240, 236, 226,0.9)), url('src/poetry-background-square.jpg');}
+#item9:hover { background-position: 100% 100; background-image: linear-gradient(rgba(240, 236, 226,0.9), rgba(240, 236, 226,0.9)), url('src/poetry-background-square.jpg');}
+
+.split-screen video {
+  width: 350px;
+  height: auto;
+}
+
+.split-screen img {
+  width: 350px;
+  height: auto;
+}
+
+footer {
+  background: #e3e3e3;
+  color: #333;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.other-writing-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1.1rem;
+}
+
+.other-writing-links a:link {
+  color: black;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.other-writing-links a:visited {
+  color: black;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+@media (min-width: 1900px) {
+  .image-container {
+      transform: scale(0.85);
+  }
+}
+
+/* @media (min-width: 1700px) {
+  .image-container {
+      transform: scale(1.2); 
+  }
+}  */
+
+
+/* @media (max-width: 1400px) {
+  .right img {
+    width: 35.71rem;
+    height: auto;
+  }
+}
+
+@media (max-width: 1000px) {
+
+  .right img {
+    width: 21.42rem;
+    height: auto;
+  }
+} */
