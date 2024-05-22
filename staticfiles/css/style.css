@@ -27,8 +27,8 @@ html {
 }
 
 .social-media img {
-  width: 1.13rem;  
-  height: 1.13rem; 
+  width: auto;
+  height: 20px;
 }
 
 .all-main h1,
