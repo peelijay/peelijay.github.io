@@ -13,6 +13,7 @@ html {
 
 .navbar h3 {
   letter-spacing: 0.2rem;
+
 } 
 
 .social-media {
@@ -20,15 +21,14 @@ html {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  column-gap: 15px;
-  padding: 58px 0px 0px 90px;
-  position: absolute;
-
+  column-gap: 1rem;
+  /* margin: 2rem 0; */
+  padding: 0.5rem 0 1.5rem 0;
 }
 
 .social-media img {
-  width: 1.13rem;  /* Adjust the size as needed */
-  height: 1.13rem; /* Adjust the size as needed */
+  width: 1.13rem;  
+  height: 1.13rem; 
 }
 
 .all-main h1,
@@ -215,9 +215,16 @@ section.sin-book {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 1.5rem;
+  /* padding: 1rem 1.5rem; */
+  height: 100%;
   max-width: 50rem;
   margin: 0 auto;
+}
+
+.media-and-logo{
+  display: flex;
+  flex-direction: column;
+  align-content: flex-end;
 }
 
 .hamburger {
@@ -261,6 +268,7 @@ section.sin-book {
   font-size: 2.1rem;
   font-weight: 500;
   color: #000;
+  padding: 2rem 0 0 0;
 }
 .nav-menu .nav-item a {
   font-size: 1.2rem;
